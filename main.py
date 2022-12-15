@@ -1,5 +1,12 @@
 
 def count_batteries_by_usage(cycles):
+  for bat_charge in cycles:
+    if bat_charge<310:
+      lowCount+=1
+    elif bat_charge==310 and bat_charge<=929:
+      mediumCount+=1
+    elif bat_charge>=930:
+      highCount+=1
   return {
     "lowCount": 0,
     "mediumCount": 0,
